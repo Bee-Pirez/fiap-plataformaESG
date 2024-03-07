@@ -6,6 +6,8 @@ import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,6 +21,11 @@ import br.com.fiap.carbonpath.ui.components.Button
 
 @Composable
 fun LoginScreen() {
+
+    val textFieldValue = remember {
+        mutableStateOf("")
+    }
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -57,15 +64,16 @@ fun LoginScreen() {
                     modifier = Modifier.padding(bottom = 24.dp),
                 )
                 Input(
-                    value = "",
+                    value = textFieldValue.value,
                     inputType = InputType.Email,
-                    placeholder = "E-mail"
+                    placeholder = "E-mail",
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Input(
                     value = "",
                     inputType = InputType.Password,
-                    placeholder = "PSenha",
+
+                    placeholder = "Senha",
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

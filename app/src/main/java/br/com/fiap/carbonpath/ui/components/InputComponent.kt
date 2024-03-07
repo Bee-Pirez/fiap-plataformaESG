@@ -1,7 +1,6 @@
 package br.com.fiap.carbonpath.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.OutlinedTextField
@@ -12,7 +11,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.KeyboardCapitalization
 
 
 enum class InputType {
@@ -21,15 +23,24 @@ enum class InputType {
     Password
 }
 
+
 @Composable
 fun Input(
     value: String,
     inputType: InputType = InputType.Text,
     placeholder: String? = null
-) {
+)
+{
+
+    val textFieldValue = remember {
+        mutableStateOf("")
+    }
+
     OutlinedTextField(
-        value = value,
-        onValueChange = {},
+        value = textFieldValue.value,
+        onValueChange = { novoValor ->
+            textFieldValue.value = novoValor
+        },
         modifier = Modifier
             .fillMaxWidth(),
         placeholder = {
@@ -40,7 +51,9 @@ fun Input(
             focusedBorderColor = Color.Black,
         ),
         shape = RoundedCornerShape(6.dp),
-        keyboardOptions = KeyboardOptions(keyboardType = when (inputType) {
+        keyboardOptions = KeyboardOptions(
+            capitalization = KeyboardCapitalization.Words,
+            keyboardType = when (inputType) {
             InputType.Email -> KeyboardType.Email
             InputType.Password -> KeyboardType.Password
             else -> KeyboardType.Text
