@@ -17,7 +17,7 @@ Aplicativo na qual empresas incentivem seus colaboradores a adotarem posturas fo
 - Calculadora
 A calculadora de pegada de carbono é uma ferramenta que permite aos colaboradores registrar suas atividades diárias relacionadas ao consumo de recursos e comportamentos que influenciam as emissões de carbono, fornecendo uma estimativa da sua pegada de carbono pessoal.
 
-- Desafios: gamificaçãs com hacking
+- Desafios: gamificaçãs com ranking
 
 
 ## 🛠️ Abrir e rodar o projeto
