@@ -21,6 +21,7 @@ A calculadora de pegada de carbono é uma ferramenta que permite aos colaborador
 
 
 ## 🛠️ Abrir e rodar o projeto
+* Pré-requisitos: [AndroidStudio]([https://nodejs.org/en/](https://developer.android.com/studio?hl=pt-br))
 
 Após baixar o projeto, você pode abrir com o Android Studio. Para isso, na tela de launcher clique em:
 
