@@ -59,13 +59,13 @@ fun LoginScreen() {
                 Input(
                     value = "",
                     inputType = InputType.Email,
-                    placeholder = "Email"
+                    placeholder = "E-mail"
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Input(
                     value = "",
                     inputType = InputType.Password,
-                    placeholder = "Password",
+                    placeholder = "PSenha",
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -100,7 +100,7 @@ fun LoginScreen() {
 
                 Button(
                     modifier = Modifier.padding(top = 24.dp),
-                    text = "Login",
+                    text = "Acessar",
                     onClick = {},
                     hasBackground = true,
                 )
@@ -111,7 +111,7 @@ fun LoginScreen() {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "Ainda não tem uma conta?",
+                    text = "Ainda não tem acesso?",
                     fontSize = 16.sp,
                     color = Color.Black,
                     fontWeight = FontWeight.Normal,
