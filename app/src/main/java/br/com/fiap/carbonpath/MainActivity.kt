@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import br.com.fiap.carbonpath.screens.HomeScreen
 import br.com.fiap.carbonpath.screens.LoginScreen
 import br.com.fiap.carbonpath.ui.theme.CarbonPathTheme
 
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LoginScreen()
+                    HomeScreen()
                 }
             }
         }
